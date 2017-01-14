@@ -1,0 +1,45 @@
+Python Note
+1. CSV file operation
+	with open(filename, option) as csvFile:
+	myReader = csv.reader(csvFile)
+	for row in myReader:
+		#do sth
+In this, csvFile is a alliance which could be anything; when reach for loop, row contains sth corresponding to a line of file
+@ don't need to close anything
+
+2. Matrix
+Simple Operation: + - * not /
+	from numpy import matrix #used for matrix operation
+	from numpy import linalg #used for linear equation
+	A = matrix([[1],[2],[3]]) #this is vertical vector
+	B = matrix([[1,2,3]])	#this is Horizontal vector
+	A.T	# transport of A is also a matrix
+	C = [[1]]
+	C.I	# inverse of C
+	
+	try to solve linear equation
+	Ax = B	# A B are both matrix
+	linalg.solve(A,B)	# will return x in matrix format
+
+3. range
+	for loop almost need range operation
+	range(k) # will return an iterator from 0 to k-1
+	range(10)	#return 0,1,2,3,4,5,6,7,8,9
+
+4. format print and sys
+	print "This is from {}, to {}".format(sys.argv[1], sys.argv[2])
+
+5. read parameter from terminal
+	sys.argv[0] 	#return program's name
+	sys.argv[1]		#first para for program
+	sys.argv[2]		# second para for program
+
+6. append and extend
+	A = [1,2,3]
+	B = [4,5]
+	A.append(B) #then A= [1,2,3,[4,5]]
+	A.extend(B) #then A= [1,2,3,4,5]
+
+7. length of list
+	A = [1,2,3,4] #its length is 4
+	A = [[1],[2,3,4]]	#its length is 2 not 4
